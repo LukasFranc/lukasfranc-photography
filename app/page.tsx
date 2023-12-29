@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer";
 import { ImageGrid } from "@/components/imageGrid";
 import cloudinary from "cloudinary";
 
@@ -18,6 +19,7 @@ export default async function Home () {
 	return (
 		<main className="mx-auto max-w-[1960px] p-4">
 			<ImageGrid imageResources={result.resources} />
+			<Footer />n
 		</main>
 	);
 }

@@ -40,7 +40,7 @@ export const ImageGrid = ( { imageResources } : { imageResources : SearchResult[
 									alt="any image"
 									width={width}
 									height={height}
-									className="max-h-[95vh] w-auto"
+									className="md:max-h-[95vh] max-md:object-contain w-auto"
 								/>
 							</DialogContent>
 						</Dialog>

@@ -12,7 +12,7 @@ export default async function Home () {
 		await cloudinary.v2.search
         .expression("resource_type:image")
 	    .sort_by("uploaded_at", "desc")
-	    .max_results(30)
+	    .max_results(50)
 	    .execute()
 	) as { resources : SearchResult[] };
 

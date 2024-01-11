@@ -1,10 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	reactStrictMode: true,
+	reactStrictMode: false,
 	images: {
-		domains: ['res.cloudinary.com']
-	},
-	plugins: ['tailwindcss', 'postcss-preset-env']
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'res.cloudinary.com',
+				port: '',
+				pathname: '/**',
+			},
+		],
+	}
 }
 
 module.exports = nextConfig

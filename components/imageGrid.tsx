@@ -1,9 +1,9 @@
 "use client";
 
 import { SearchResult } from "@/app/page";
-import { CloudinaryImage } from "@/components/cloudinaryImage";
 import { PersonalCard } from "@/components/personalCard";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import Image from "next/image";
 
 
 export const ImageGrid = ( { imageResources } : { imageResources : SearchResult[] } ) => {
@@ -21,27 +21,28 @@ export const ImageGrid = ( { imageResources } : { imageResources : SearchResult[
 				}
 
 				return (
-					<div key={image.public_id}>
+					<div key={image.public_id} data-id={image.secure_url}>
 						<Dialog>
 							<DialogTrigger asChild>
-								<CloudinaryImage
-									key={image.public_id}
-									src={image.public_id}
-									alt="any image"
-									width={width}
-									height={height}
-									className="hover:cursor-zoom-in hover:opacity-80 transition-all duration-200"
-								/>
+								<div>
+									<Image
+										src={image.secure_url}
+										alt=""
+										width={width / 5}
+										height={height / 5 }
+										className="hover:cursor-zoom-in w-full hover:opacity-80 transition-all duration-200"
+									/>
+								</div>
 							</DialogTrigger>
 							<DialogContent className="flex justify-center bg-black border-none">
-								<CloudinaryImage
-									key={image.public_id}
-									src={image.public_id}
-									alt="any image"
-									width={width}
-									height={height}
-									className="md:max-h-[95vh] max-md:object-contain w-auto"
-								/>
+									<Image
+										src={image.secure_url}
+										alt=""
+										width={width / 2}
+										height={height / 2}
+										className="md:max-h-[95vh] max-md:object-contain w-auto"
+										unoptimized
+									/>
 							</DialogContent>
 						</Dialog>
 					</div>

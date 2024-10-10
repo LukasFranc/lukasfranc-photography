@@ -17,8 +17,8 @@ export const PersonalCard = () => {
 			<div className="flex gap-1 flex-col">
 				<p className="italic text-sm">V případě zájmu mě neváhejte kontaktovat.</p>
 				<Link href="https://www.lukasfranc.cz" className="no-underline hover:underline">www.lukasfranc.cz</Link>
-				<Link href="mailto:info@lukasfranc.cz"
-					  className="no-underline hover:underline">info@lukasfranc.cz</Link>
+				<Link href="mailto:lukas.franc.work@gmail.com"
+					  className="no-underline hover:underline">lukas.franc.work@gmail.com</Link>
 			</div>
 			<hr/>
 			<div className="text-xs">
